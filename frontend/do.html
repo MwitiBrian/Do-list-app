@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Do list app</title>
-                <link rel="stylesheet" href="style.css"
-
-
-        </head> <body>
-                <div class="list-app">
-                        <form>
-                                <h1>To do list app</h1>
-                                <label for>Title</label><br>
-                                <input type="text"id="text" placeholder="write title"><br>
-                                <label for>description</label><br>
-                                <textarea placeholder="item description"></textarea><br>
-                                <label for="image">Upload Image</label><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="list-app">
+        <h1>To-Do List App</h1>
+        <form id="taskForm">
+            <label for="text">Title</label>
+            <input type="text" id="text" placeholder="Write title" required><br>
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Item description" required></textarea><br>
+            <label for="image">Upload Image</label>
             <input type="file" id="image" accept="image/*"><br>
             <img id="image-preview" style="display: none; margin-top: 10px; width: 100%;" alt="Image Preview">
-                                <button type="text" id="add">Add</button><br>
-                                </form>
-                </div>
-                <div>
-                        <form>
-                                
-                        </form>
-                </div>
-        </body>
-</html>     
-                               
-                               
-
-
-
+            <button type="submit" id="add">Add</button>
+        
+        </form>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

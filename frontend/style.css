@@ -1,9 +1,8 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:wheat;
+    background-color: wheat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,12 +10,14 @@ body {
 }
 
 .list-app {
-    background:white;
+    background: white;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
     text-align: center;
+    max-height: 90vh; /* Limit the maximum height of the app */
+    overflow: hidden; /* Prevent overflow of the entire app */
 }
 
 h1 {
@@ -34,12 +35,14 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid:whitesmoke;
+    border: 1px solid whitesmoke;
     border-radius: 4px;
     box-sizing: border-box;
+    resize: none;
 }
+
 button {
-    background-color:lightseagreen;
+    background-color: lightseagreen;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -50,6 +53,32 @@ button {
 }
 
 button:hover {
-    background-color:greenyellow;
-    color:black;
+    background-color: greenyellow;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px; /* Set a maximum height for the task list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    background-color:darksalmon;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+li img {
+    max-width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
